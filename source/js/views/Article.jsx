@@ -23,7 +23,7 @@ class Article extends Component {
     error: PropTypes.string,
     loading: PropTypes.bool,
     news: PropTypes.object,
-
+    match: PropTypes.object,
     toggleSiteHiddenComponents: PropTypes.func,
     // from react-redux connect
     dispatch: PropTypes.func,
@@ -33,10 +33,10 @@ class Article extends Component {
     const {
       dispatch,
       news,
+      match,
     } = this.props;
-
     if (!news) {
-      dispatch(getNews());
+      dispatch(getNews(match.params.category));
     }
   }
 
@@ -47,6 +47,7 @@ class Article extends Component {
       news,
       toggleSiteHiddenComponents,
     } = this.props;
+    
     return (
       <Page
         isFullpage={ false }

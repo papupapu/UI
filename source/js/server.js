@@ -97,7 +97,7 @@ app.get('/people', (req, res) => {
 });
 
 app.get('/:category/:id', (req, res) => {
-  handleRequest(req, res, [getNewsServer]);
+  handleRequest(req, res, [getNewsServer], { category: 'aaa' });
 });
 
 // All other routes

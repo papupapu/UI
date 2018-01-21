@@ -12,6 +12,7 @@ import api from 'api/news';
 
 function createGetNews(isServer = false) {
   return function* (options) { // eslint-disable-line consistent-return
+    console.log('options', options.category);
     try {
       const data = yield call(() => api.getNews(options.id));
       const action = { type: GET_NEWS_SUCCESS, data };
