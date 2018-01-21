@@ -1,14 +1,20 @@
 :root {
-  --font-family-serif: Garamond, "Times New Roman", serif;
-  --font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-Racing: "Racing Sans One", Garamond, "Times New Roman", serif;
+  --font-family-Roboto: "Roboto", Helvetica, Arial, sans-serif;
 
-  --grey-border: #eee;
-  --grey-text: #aaa;
-  --black: #000;
-  --white: #fff;
+  --black:#000;
+  --white:#FFF;
+  --orange:#F39B00;
+  --grey:#656565;
+  --darkerGrey:#333;
+  --lighterGrey:#C1C5C8;
+  --blueStone:#303A45;
+  --fb-background:#4460ae;
+  --tw-background:#00aced;
+  --gp-background:#ff4a36;
+  --body-background:#F1F1F1;
+  --box-boxShadow:0 2px 8px 0 rgba(0, 0, 0, .1);
 }
 
-@custom-media --sm (max-width: 500px);
-@custom-media --md (min-width: 769px);
+@custom-media --sm (min-width: 576px);
 @custom-media --lg (min-width: 1025px);
-@custom-media --xl (min-width: 1800px);

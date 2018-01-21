@@ -12,8 +12,9 @@ import Serialize from 'remotedev-serialize/immutable';
 
 import configureStore from 'config/store';
 import getServerHtml from 'components/server/ServerHTML';
-import App from 'views/App';
+import Routes from 'routes';
 
+import { getNewsServer } from 'sagas/news';
 import { getPeopleServer } from 'sagas/people';
 
 // Load SCSS
@@ -44,7 +45,7 @@ function sendResponse(req, res, store) {
   const appHtml = ReactDOMServer.renderToString(
     <Provider store={ store }>
       <StaticRouter location={ req.url } context={ context }>
-        <App />
+        <Routes />
       </StaticRouter>
     </Provider>
   );
@@ -93,6 +94,10 @@ function handleRequest(req, res, sagas = null, sagaArgs = {}) {
 // and object containing saga's options (usually req.params)
 app.get('/people', (req, res) => {
   handleRequest(req, res, [getPeopleServer]);
+});
+
+app.get('/:category/:id', (req, res) => {
+  handleRequest(req, res, [getNewsServer]);
 });
 
 // All other routes

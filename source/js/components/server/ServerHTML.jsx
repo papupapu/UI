@@ -7,11 +7,23 @@ const ServerHTML = ({ appHtml, dehydratedState }) => (
   <html lang='en'>
     <head>
       <meta charSet='utf-8' />
-      <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0' />
-
-      <title>Marvin &bull; React/Redux Boilerplate</title>
-
-      <link rel='stylesheet' href={ `/${ outputFiles.css }` } />
+      <title>grid test</title>
+      <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+      <link
+        rel='stylesheet'
+        href='https://fonts.googleapis.com/css?family=Racing+Sans+One|Roboto:300,400'
+        type='text/css'
+      />
+      <link
+        rel='stylesheet'
+        href='https://use.fontawesome.com/releases/v5.0.4/css/all.css'
+        type='text/css'
+      />
+      <link
+        rel='stylesheet'
+        href={ `/${ outputFiles.css }` }
+        type='text/css'
+      />
     </head>
     <body>
       <div

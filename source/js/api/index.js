@@ -29,7 +29,6 @@ function ApiError(message, data, status) {
 const fetchResource = (path, userOptions = {}) => {
   // Define default options
   const defaultOptions = {};
-
   // Define default headers
   const defaultHeaders = {
     'Content-Type': 'application/json',

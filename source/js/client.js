@@ -8,7 +8,7 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 
 import configureStore from 'config/store';
-import App from 'views/App';
+import Routes from 'routes';
 
 // Load CSS
 import 'index.css';
@@ -22,7 +22,7 @@ renderMethod(
   <AppContainer>
     <Provider store={ store }>
       <BrowserRouter>
-        <App />
+        <Routes />
       </BrowserRouter>
     </Provider>
   </AppContainer>,
