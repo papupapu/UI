@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
-import { getNews } from 'actions/news';
 
 import UIHandler from '../components/global/ui/UIHandler';
 import Page from '../components/global/ui/Page';
@@ -12,42 +9,36 @@ import DateAuthor from '../components/global/layout/article/DateAuthor';
 import Related from '../components/global/layout/article/Related';
 import Picture from '../components/global/layout/picture/Picture';
 
-@connect(state => ({
-  error: state.news.get('error'),
-  loading: state.news.get('loading'),
-  news: state.news.get('news'),
-}))
-
 class Article extends Component {
   static propTypes = {
+    mess: PropTypes.string, // to remove
     error: PropTypes.string,
     loading: PropTypes.bool,
     news: PropTypes.object,
     match: PropTypes.object,
     toggleSiteHiddenComponents: PropTypes.func,
-    // from react-redux connect
-    dispatch: PropTypes.func,
+    getNews: PropTypes.func,
   }
 
   componentWillMount() {
     const {
-      dispatch,
       news,
       match,
+      getNews,
     } = this.props;
     if (!news) {
-      dispatch(getNews(match.params.category));
+      getNews(match.params.category);
     }
   }
 
   render() {
     const {
+      mess, // to remove
       loading,
       error,
-      news,
       toggleSiteHiddenComponents,
     } = this.props;
-    
+    console.log(mess); // to remove
     return (
       <Page
         isFullpage={ false }

@@ -27,9 +27,10 @@ class Home extends Component {
   render() {
     const {
       // counter,
+      match,
       toggleSiteHiddenComponents,
     } = this.props;
-
+    
     return (
       <Page
         isFullpage={ false }
@@ -37,6 +38,7 @@ class Home extends Component {
       >
         <div className='content'>
           <article className='detail'>
+            {match.url}
             <a href='/aaa/aaa' title='suca'>aaa</a>
           </article>
         </div>
