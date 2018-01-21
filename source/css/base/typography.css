@@ -10,6 +10,7 @@ html, body{
 }
 
 h1, h2, h3, h4, h5, h6{
+	margin:0; padding:0;
 	font-family:var(--font-family-Racing);
 	color:var(--blueStone);
 }
@@ -26,11 +27,11 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time{
+	margin:0; padding:0;
 	font-family:var(--font-family-Roboto);
 }
 
 ol, ul, li{
-	margin:0; padding:0;
   list-style-type:none;
 }
 
