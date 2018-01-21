@@ -30,7 +30,7 @@ const actionsMap = {
   [GET_NEWS_SUCCESS]: (state, action) => {
     return state.merge(Map({
       loading: false,
-      news: action.data,
+      news: action.data.articles,
     }));
   },
 };

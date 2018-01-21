@@ -15,7 +15,7 @@ function createGetNews(isServer = false) {
     console.log('options', options.category);
     try {
       const data = yield call(() => api.getNews(options.id));
-      const action = { type: GET_NEWS_SUCCESS, data };
+      const action = { type: GET_NEWS_SUCCESS, category: options.category, data };
 
       if (isServer) {
         return action;

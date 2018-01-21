@@ -7,6 +7,15 @@
   grid-template-rows:3.6rem 5.4rem auto 25rem;
   grid-template-areas:
     "fullwidth";
+
+  @media (--sm) {
+    grid-template-rows:4.4rem 7rem auto 50rem;
+  }
+
+  @media (--lg) {
+    grid-template-rows:4.4rem 9rem auto 50rem;
+  }
+
 }
 
 #utils{
@@ -28,22 +37,4 @@
 #footer{
   grid-area: fullwidth;
   grid-row: 4;
-
-  background:var(--blueStone);
-}
-
-@media (--sm) {
-
-  .wrap{
-    grid-template-rows:4.4rem 7rem auto 50rem;
-  }
-
-}
-
-@media (--lg) {
-
-  .wrap{
-    grid-template-rows:4.4rem 9rem auto 50rem;
-  }
-
 }
