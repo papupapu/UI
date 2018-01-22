@@ -6,16 +6,42 @@
 
   color:var(--blueStone);
   background:var(--white);
+
+  @media (--sm) {
+    padding:0 2rem;
+    height:7rem;
+  }
+
+  @media (--lg) {
+    padding:0 4rem;
+    height:9rem;
+  }
+  
 }
 
 #header nav li{
   float:left;
   margin:.1rem 0 0 .8rem;
   font-weight:300; font-size:1.8rem; text-transform: uppercase;
+
+  @media (--sm) {
+    margin:.4rem 0 0 1.9rem;
+    font-size:2.1rem;
+  }
+
+  @media (--lg) {
+    margin:.5rem 0 0 3.8rem;
+  }
+
 }
 
 #header nav li.category{
   display:none;
+  
+  @media (--sm) {
+    display:block;
+  }
+
 }
 
 #header nav li a{
@@ -25,6 +51,15 @@
 #header nav li:first-of-type{
   margin:0;
   font-size:2.1rem;
+
+  @media (--sm) {
+    font-size:2.7rem;
+  }
+
+  @media (--lg) {
+    font-size:2.9rem;    
+  }
+
 }
 
 #header nav li a:hover,
@@ -39,6 +74,21 @@
   width:2rem; height:1.5rem;
   background:url(../assets/img/css/header/menu_handle.svg) right center no-repeat;
   text-indent:-9999em;
+
+  @media (--sm) {
+    margin-top:-.1rem;
+    width:10rem;
+    font-weight:300; font-size:2.1rem; text-transform:uppercase;
+
+    &:before {
+      content:'Topics';
+
+      float:left;
+      margin-top:-.4rem; margin-right:.9rem;
+      text-indent:0;      
+    }
+
+  }    
 }
 
 #utils{
@@ -48,84 +98,32 @@
 
   font-size:2rem; color:var(--orange);
   background:var(--blueStone);
+
+  @media (--sm) {
+    padding:0 2rem;
+  }
+
+  @media (--lg) {
+    padding:0 4rem;
+  }  
+
 }
 
 #utils a{
   font-size:1.2rem; color:var(--orange); text-transform:uppercase;
+
+  @media (--sm) {
+    &:before {
+      content:'Login';
+      
+      float:left;
+      margin-right:.9rem;
+      line-height:2rem;
+    }
+  }
 }
 
 #utils i{
   margin-top:-.1rem;
   font-size:2rem;
-}
-
-@media (--sm) {
-
-  #header{
-    height:7rem;
-  }
-
-  #utils,
-  #header{
-    padding:0 2rem;
-  }  
-
-  #header nav li{
-    margin:.4rem 0 0 1.9rem;
-    font-size:2.1rem;
-  }  
-
-  #header nav li.category{
-    display:block;
-  }
-
-  #header nav li:first-of-type{
-    font-size:2.7rem;
-  }
-
-  #header a.topics{
-    margin-top:-.1rem;
-    width:10rem;
-    font-weight:300; font-size:2.1rem; text-transform:uppercase;
-  }  
-
-  #header a.topics:before{
-    content:'Topics';
-
-    float:left;
-    margin-top:-.4rem; margin-right:.9rem;
-    text-indent:0;
-  }
-
-  #utils a:before{
-    content:'Login';
-    
-    float:left;
-    margin-right:.9rem;
-    line-height:2rem;
-  } 
-
-}
-
-@media (--lg) {
-
-  #header{
-    height:9rem;
-  }
-
-  #utils,
-  #header{
-    padding:0 4rem;
-  }
-
-  /* ELEMENTS */
-
-  #header nav li{
-    margin:.5rem 0 0 3.8rem;
-  }    
-
-  #header nav li:first-of-type{
-    font-size:2.9rem;
-  }    
-
 }

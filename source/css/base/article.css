@@ -64,27 +64,78 @@
 
 }
 
-/* contents */
+/* contents - typography */
+
+.detail .article h1{
+  font-size:2.8rem; line-height:3.2rem;
+
+  @media (--sm) {
+    font-size:4rem; line-height:4.6rem;
+  }
+
+  @media (--lg) {
+    font-size:5rem; line-height:5.6rem;
+  }
+
+}
+
+.detail .article h2{
+  font-weight:300; font-size:1.8rem; line-height:2.4rem; font-family:var(--font-family-Roboto);
+
+  @media (--sm) {
+    font-size:2.2rem; line-height:2.8rem;
+  }  
+
+  @media (--lg) {
+    font-size:2.4rem; line-height:3.2rem;
+  }
+
+}
+
+.detail .article h3{
+  font-size:2rem;
+
+  @media (--sm) {
+    font-size:2.4rem;
+  }
+
+}
+
+.detail .article p,
+.detail .article ul{
+  font-weight:300; font-size:1.6rem; line-height:2.2rem;
+
+  @media (--sm) {
+    font-size:1.8rem; line-height:2.4rem;
+  }
+
+  @media (--lg) {
+    line-height:2.6rem;
+  }
+
+}
+
+.detail .article li span{
+  color:var(--grey);
+}
+
+/* contents - spacing */
 
 .detail .article h1{
   margin:.5rem 0 0;
-  font-size:2.8rem; line-height:3.2rem;
 }
 
 .detail .article h2{
   margin:1rem 0 0;
-  font-weight:300; font-size:1.8rem; line-height:2.4rem; font-family:var(--font-family-Roboto);
 }
 
 .detail .article h3{
   margin:.8rem 0 0;
-  font-size:2rem;
 }
 
 .detail .article p,
 .detail .article ul{
   margin:1.1rem 0 0;
-  font-weight:300; font-size:1.6rem; line-height:2.2rem;
 }
 
 .detail .article ul li{
@@ -93,10 +144,6 @@
 
 .detail .article ul li:first-of-type{
   padding:0 0 0 1rem;
-}
-
-.detail .article li span{
-  color:var(--grey);
 }
 
 /* gallery */
@@ -297,6 +344,11 @@
 
 .detail .article .related ul li:first-of-type{
   margin:0;
+
+  @media (--sm) {
+    padding:0;
+  }
+
 }
 
 .detail .article .related ul li h4{
@@ -332,26 +384,19 @@
 
 @media (--sm) {
 
-  /* contents */
-
-  .detail .article h1{
-    font-size:4rem; line-height:4.6rem;
-  }
+/* contents - spacing */
 
   .detail .article h2{
     margin:1.8rem 0 0;
-    font-size:2.2rem; line-height:2.8rem;
   }
 
   .detail .article h3{
     margin:1.9rem 0 0;
-    font-size:2.4rem;
   }
 
   .detail .article p,
   .detail .article ul{
     margin:2rem 0 0;
-    font-size:1.8rem; line-height:2.4rem;
   }
 
   .detail .article ul li{
@@ -360,33 +405,29 @@
   
   .detail .article ul li:first-of-type{
     padding:0 0 0 2rem;
-  }
+  }  
 
 }
 
 @media (--lg) {
 
-  /* contents */
+  /* contents - spacing */
 
   .detail .article h1{
     margin:0;
-    font-size:5rem; line-height:5.6rem;
   }  
 
   .detail .article h2{
     margin:2.4rem 0 0;
-    font-size:2.4rem; line-height:3.2rem;
   }
 
   .detail .article h3{
     margin:2.8rem 0 0;
-    font-size:2.4rem;
   }
 
   .detail .article p,
   .detail .article ul{
     margin:2.9rem 0 0;
-    font-size:1.8rem; line-height:2.6rem;
   }
   
   .detail .article ul li{
@@ -395,6 +436,6 @@
   
   .detail .article ul li:first-of-type{
     padding:0 0 0 2rem;
-  }
+  }  
 
 }
