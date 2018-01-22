@@ -35,6 +35,7 @@ class Home extends Component {
       <Page
         isFullpage={ false }
         toggleSiteHiddenComponents={ toggleSiteHiddenComponents }
+        match={ match }
       >
         <div className='content'>
           <article className='detail'>

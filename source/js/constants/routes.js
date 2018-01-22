@@ -1,8 +1,10 @@
-export const publicPath = '/';
+import { CATEGORIES, PUBLICPATH } from './sitesettings';
+
+const categoryRoutesCodes = {};
+CATEGORIES.forEach(cat => categoryRoutesCodes[cat.slug.toUpperCase()] = `${ PUBLICPATH }${ cat.path }`);
+export { categoryRoutesCodes };
+
 
 export const routeCodes = {
-  HOME: publicPath,
-  PEOPLE: `${ publicPath }people`,
-  SURF: `${ publicPath }surf`,
-  ARTICLE: `${ publicPath }:category/:id`,
+  ARTICLE: `${ PUBLICPATH }:category/:id`,
 };

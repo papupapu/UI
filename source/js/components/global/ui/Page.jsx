@@ -8,6 +8,7 @@ const Page = (
   {
     children,
     isFullpage,
+    match,
     toggleSiteHiddenComponents,
   }
 ) => {
@@ -22,6 +23,7 @@ const Page = (
     code = (
       <div className='wrap'>
         <Header
+          match={ match }
           toggleSiteNavigation={ toggleSiteHiddenComponents }
         />
         { children }

@@ -36,6 +36,7 @@ class Article extends Component {
       mess, // to remove
       loading,
       error,
+      match,
       toggleSiteHiddenComponents,
     } = this.props;
     console.log(mess); // to remove
@@ -43,6 +44,7 @@ class Article extends Component {
       <Page
         isFullpage={ false }
         toggleSiteHiddenComponents={ toggleSiteHiddenComponents }
+        match={ match }
       >
         { loading && <div>Loading people...</div> }
         { error && error.toString() }
