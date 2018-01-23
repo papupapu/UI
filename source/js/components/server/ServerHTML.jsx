@@ -11,7 +11,7 @@ const ServerHTML = ({ appHtml, dehydratedState }) => (
       <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
       <link
         rel='stylesheet'
-        href='https://fonts.googleapis.com/css?family=Racing+Sans+One|Roboto:300,400'
+        href='https://fonts.googleapis.com/css?family=Racing+Sans+One|Roboto:100,300,400'
         type='text/css'
       />
       <link

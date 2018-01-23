@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../layout/header/Header';
 import Utils from '../layout/header/Utils';
+import Nav from '../layout/header/Nav';
 import Footer from '../layout/footer/Footer';
 
 const Page = (
@@ -21,16 +22,21 @@ const Page = (
     );
   } else {
     code = (
-      <div className='wrap'>
-        <Header
+      <div className='app'>
+        <div className='wrap'>
+          <Header
+            match={ match }
+            toggleSiteNavigation={ toggleSiteHiddenComponents }
+          />
+          { children }
+          <Utils
+            toggleSiteNavigation={ toggleSiteHiddenComponents }
+          />
+          <Footer />
+        </div>
+        <Nav
           match={ match }
-          toggleSiteNavigation={ toggleSiteHiddenComponents }
         />
-        { children }
-        <Utils
-          toggleSiteNavigation={ toggleSiteHiddenComponents }
-        />
-        <Footer />
       </div>
     );
   }

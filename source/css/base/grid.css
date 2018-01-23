@@ -16,6 +16,7 @@
     grid-template-rows:4.4rem 9rem auto 50rem;
   }
 
+  position:relative; z-index:2;
 }
 
 #utils{
@@ -32,6 +33,7 @@
   grid-area: fullwidth;
   grid-row: 3;
 
+  background:var(--body-background);
 }
 
 #footer{

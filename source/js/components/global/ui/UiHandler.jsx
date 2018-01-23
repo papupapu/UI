@@ -64,13 +64,19 @@ export default function UIHandler(Content) {
           action = evt.target.className;
         }
         let updateModalState = false;
+        let isMenu = false; // cool menu needs special care eheh
         if (action.indexOf('_handle') > -1) {
           action = action.replace('_handle', '_open');
           updateModalState = action === 'modal_open';
+          isMenu = action === 'menu_open';
           if (docClass.contains(action)) {
             docClass.remove(action);
-            docClass.add('closing');
-            setTimeout(() => { docClass.remove('closing'); }, 305);
+            docClass.add(isMenu ? 'menu_closing' : 'closing');
+            if (isMenu) {
+              setTimeout(() => { docClass.remove('menu_closing'); }, 705);
+            } else {
+              setTimeout(() => { docClass.remove('closing'); }, 305);
+            }
             // enableScroll();
           } else {
             this.uiHiddenComponents.forEach(

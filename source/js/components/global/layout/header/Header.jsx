@@ -82,7 +82,14 @@ const Header = (
           { breadcrumb }
         </ul>
       </nav>
-      <a href='/' title='Topics' className='topics'>Topics</a>
+      <a
+        href='/'
+        title='Topics'
+        className='menu_handle topics'
+        onClick={ (e) => { e.preventDefault(); toggleSiteNavigation(e); } }
+      >
+        Topics
+      </a>
     </header>
   );
 };

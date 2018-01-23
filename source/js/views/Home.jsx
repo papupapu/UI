@@ -18,6 +18,17 @@ class Home extends Component {
     dispatch: PropTypes.func,
   }
 
+  componentWillMount() {
+    try {
+      if (document && document.body.classList.contains('menu_open')) {
+        document.body.classList.remove('menu_open');
+      }
+    } catch (e) {
+      console.warn('Home - componentWillMount');
+      console.warn(e);
+    }
+  }
+
   handleTestButtonClick = () => {
     const { dispatch } = this.props;
 

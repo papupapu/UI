@@ -29,6 +29,14 @@ class Article extends Component {
     if (!news) {
       getNews(match.params.category);
     }
+    try {
+      if (document && document.body.classList.contains('menu_open')) {
+        document.body.classList.remove('menu_open');
+      }
+    } catch (e) {
+      console.warn('Home - componentWillMount');
+      console.warn(e);
+    }
   }
 
   render() {
@@ -120,20 +128,20 @@ class Article extends Component {
               <Related />
             </div>
             <Picture
-              imgSrc='http://localhost:3000/img/345x259.jpg'
+              imgSrc='http://papu.cloudno.de/img/345x259.jpg'
               imgAlt='surf'
               srcSetList={
                 [
                   {
-                    imgSrc: 'http://localhost:3000/img/768x577.jpg',
+                    imgSrc: 'http://papu.cloudno.de/img/768x577.jpg',
                     mediaQuery: '(max-width: 950px)',
                   },
                   {
-                    imgSrc: 'http://localhost:3000/img/1000x751.jpg',
+                    imgSrc: 'http://papu.cloudno.de/img/1000x751.jpg',
                     mediaQuery: '(max-width: 1200px)',
                   },
                   {
-                    imgSrc: 'http://localhost:3000/img/1684x1000.jpg',
+                    imgSrc: 'http://papu.cloudno.de/img/1684x1000.jpg',
                     mediaQuery: '(max-width: 5000px)',
                   },
                 ]

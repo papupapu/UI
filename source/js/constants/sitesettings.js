@@ -1,4 +1,5 @@
 export const SITENAME = 'Sitename';
+export const SITEDESCRIPTION = 'Suspendisse eget nulla mollis, efficitur urna nec, viverra dolor. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus.';
 
 export const PUBLICPATH = '/';
 
